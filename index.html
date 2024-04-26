@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="img/icon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bibliophile</title>
+
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <h1>Bibliophile</h1>
+        <ul class="nav__links">
+          <li class="nav__item">
+            <a class="nav__link" href="#section--1">Quotes</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--2">True Stories</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--btn btn--show-signupmodal" href="#"
+              >Sign Up</a
+            >
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--btn btn--show-signinmodal" href="#"
+              >Sign In</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <br />
+      <br />
+      <br />
+      <div class="header__title">
+        <h1>
+          "A
+          <!-- Green highlight effect -->
+          <span class="highlight">book</span>
+          is a
+          <span class="highlight">dream </span> you hold in your hand."
+        </h1>
+        <h4>- Neil Gaiman</h4>
+        <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
+        <img src="img/hero.png" class="header__img" alt="book photo" />
+      </div>
+    </header>
+
+    <section class="section" id="section--1">
+      <div class="section__title">
+        <h2 class="section__description">Quotes</h2>
+        <h3 class="section__header">
+          Here are some famous quotes about reading.
+        </h3>
+      </div>
+
+      <div class="features">
+        <img
+          src="img/mason-cooley.jpg"
+          alt="Mason Cooley Quote"
+          class="features__img"
+        />
+        <div class="features__feature">
+          <h5 class="features__header">Mason Cooley</h5>
+          <p>
+            Reading gives us someplace to go when we have to stay where we are.
+          </p>
+        </div>
+
+        <div class="features__feature">
+          <h5 class="features__header">Richard Peck</h5>
+          <p>To read is to travel the world without moving your chair.</p>
+        </div>
+        <img
+          src="img/richard-peck.jpg"
+          alt="richard quote"
+          class="features__img"
+        />
+
+        <img
+          src="img/ernest-hemingway.jpg"
+          alt="Ernest Hemingway Qoute"
+          class="features__img"
+        />
+        <div class="features__feature">
+          <h5 class="features__header">Ernest Hemingway</h5>
+          <p>There is no friend as loyal as a book.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="section--2">
+      <div class="section__title section__title--testimonials">
+        <h2 class="section__description">True Stories</h2>
+        <h3 class="section__header">
+          Reading changed the lives of millions of people for the better.
+        </h3>
+      </div>
+
+      <div class="slider">
+        <div class="slide">
+          <div class="testimonial">
+            <blockquote class="testimonial__text">
+              I used to feel trapped in my small town, with nothing exciting
+              ever happening. Then, I discovered fantasy novels. They took me to
+              magical worlds with dragons, elves, and brave heroes. Reading
+              became my escape, but it was more than that. It sparked my
+              imagination and showed me possibilities beyond my everyday life.
+              Now, I'm writing my own fantasy novel, inspired by the stories
+              that transported me to different realities.
+            </blockquote>
+            <address class="testimonial__author">
+              <img src="img/user-1.jpg" alt="" class="testimonial__photo" />
+              <h6 class="testimonial__name">Amer</h6>
+              <p class="testimonial__location">Cairo, Egypt</p>
+            </address>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="testimonial">
+            <blockquote class="testimonial__text">
+              "I was stuck in a dead-end job, feeling unfulfilled. One day, I
+              picked up a biography of a successful entrepreneur. Their story of
+              overcoming obstacles and achieving their dreams resonated deeply
+              with me. Reading it inspired me to take control of my own life. I
+              quit my job, started my own business, and I'm now on a path to
+              achieving my goals. That book was a turning point for me."
+            </blockquote>
+            <address class="testimonial__author">
+              <img src="img/user-2.jpg" alt="" class="testimonial__photo" />
+              <h6 class="testimonial__name">Omar</h6>
+              <p class="testimonial__location">Khartoum, Sudan</p>
+            </address>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="testimonial">
+            <blockquote class="testimonial__text">
+              Reading has been my refuge during difficult times. When I lost a
+              loved one, I found solace in poetry and memoirs about grief. The
+              words resonated with my pain and offered a sense of comfort.
+              Reading also helped me find humor during dark times. Lighthearted
+              novels or funny essays provided a much-needed escape and lifted my
+              spirits.
+            </blockquote>
+            <address class="testimonial__author">
+              <img src="img/user-3.jpg" alt="" class="testimonial__photo" />
+              <h6 class="testimonial__name">Ammar</h6>
+              <p class="testimonial__location">Damascus, Syria</p>
+            </address>
+          </div>
+        </div>
+
+        <button class="slider__btn slider__btn--left">&larr;</button>
+        <button class="slider__btn slider__btn--right">&rarr;</button>
+        <div class="dots"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <ul class="footer__nav">
+        <li class="footer__item">
+          <a class="footer__link" href="#">About</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Terms of Use</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Privacy Policy</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="#">Contact Us</a>
+        </li>
+      </ul>
+    </footer>
+
+    <div class="signupmodal hidden">
+      <button class="btn--close-signupmodal">&times;</button>
+      <h2 class="modal__header">
+        <span class="highlight"> Sign Up</span>
+      </h2>
+      <form class="signup__form">
+        <label>Username</label>
+        <input type="text" />
+        <label>Country</label>
+        <input type="text" />
+        <label>Age</label>
+        <input type="email" />
+        <label>Email Address</label>
+        <input type="text" />
+        <button class="btn">Confirm &rarr;</button>
+      </form>
+    </div>
+    <div class="signupoverlay hidden"></div>
+
+    <div class="signinmodal hidden">
+      <button class="btn--close-signinmodal">&times;</button>
+      <h2 class="modal__header">
+        <span class="highlight"> Sign in</span>
+      </h2>
+      <form class="signin__form">
+        <label>Email Address</label>
+        <input type="email" />
+        <label>Password</label>
+        <input type="text" />
+        <button class="btn">Log in &rarr;</button>
+      </form>
+    </div>
+    <div class="signinoverlay hidden"></div>
+    <!-- <script src="script.js"></script> -->
+  </body>
+</html>
