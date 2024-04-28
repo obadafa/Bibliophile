@@ -2,9 +2,11 @@ const url = `https://www.googleapis.com/books/v1/volumes?q=search+terms`;
 
 const search = document.querySelector(".search");
 const searchBtn = document.querySelector(".searchBtn");
+
 const div = document.getElementById("div1");
 
 let bookDiv = "";
+let bookDetails = "";
 
 // Fetch the books from api
 const fetchBooks = async () => {
@@ -15,8 +17,10 @@ const fetchBooks = async () => {
       bookDiv += `<div class="book">
                     <img class="book-picture" src="${book.volumeInfo.imageLinks.smallThumbnail}" />
                     <p class="title">${book.volumeInfo.title}</p>
-                    <button class="reed-more-button">Rate &rarr;</button>
-                </div>`;
+                    <form action="/more">
+                      <button class="read-more-button" type = "submit" id=${book.id} onclick="more(${book.id})">More &rarr;</button>
+                    </form>
+                    </div>`;
     });
   } catch (error) {
     console.error({ error });
@@ -36,11 +40,13 @@ const searchMethod = async () => {
           .toLowerCase()
           .search(search.value.toLowerCase()) != -1
       ) {
-        bookDiv += `<div class="book">
+        bookDiv += `<div class="book" >
                     <img class="book-picture" src="${book.volumeInfo.imageLinks.smallThumbnail}" />
                     <p class="title">${book.volumeInfo.title}</p>
-                    <button class="reed-more-button">Rate &rarr;</button>
-                </div>`;
+                    <form action="/more">
+                    <button class="read-more-button" type = "submit" id=${book.id} onclick="more(${book.id})">More &rarr;</button>
+                    </form>
+                  </div>`;
       }
     });
   } catch (error) {
@@ -55,4 +61,10 @@ const searchMethod = async () => {
 };
 
 fetchBooks();
+
 searchBtn.addEventListener("click", searchMethod);
+
+const more = (id) => {
+  localStorage.setItem("bookid", id.id);
+  window.location.replace("http://127.0.0.1:5000/templates/more/more.html");
+};

@@ -5,11 +5,10 @@ const selectedBook = localStorage.getItem("bookid");
 const bookPic = document.getElementById("bookPic");
 const information = document.getElementById("information");
 
-console.log(selectedBook);
 let bookDiv = "";
 
 goBack.addEventListener("click", () => {
-  window.location.replace("http://127.0.0.1:5501/book-viewer/book-viewer.html");
+  window.location.replace("http://127.0.0.1:5000/templates/book-viewer");
 });
 
 const fetchBook = async () => {
@@ -32,5 +31,4 @@ const fetchBook = async () => {
                           </a>`;
 };
 
-console.log(information.innerHTML);
 fetchBook();

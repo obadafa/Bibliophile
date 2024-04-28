@@ -100,7 +100,7 @@ p {
   margin-left: 8px;
 }
 
-.reed-more-button {
+.read-more-button {
   background-color: #90cdc3; /* Green color */
   border: none;
   color: white;
@@ -116,7 +116,7 @@ p {
   border-radius: 5px;
 }
 
-.reed-more-button:hover {
+.read-more-button:hover {
   background-color: #5fb8a9;
 }
 
