@@ -28,12 +28,14 @@ btnScrollTo.addEventListener("click", function (e) {
 ///////////////////////////////////////
 // Modal window
 
+// Sign up model
 const openSignupModal = function (e) {
   e.preventDefault();
   signupmodal.classList.remove("hidden");
   signupoverlay.classList.remove("hidden");
 };
 
+// Sign in window
 const closeSignupModal = function () {
   signupmodal.classList.add("hidden");
   signupoverlay.classList.add("hidden");

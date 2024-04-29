@@ -35,6 +35,7 @@ const searchMethod = async () => {
     const { items } = await response.json();
     bookDiv = "";
     items.forEach((book) => {
+      // if the searched word match part of book title.
       if (
         book.volumeInfo.title
           .toLowerCase()
@@ -60,11 +61,14 @@ const searchMethod = async () => {
   }
 };
 
+// function calling to fetch the book from api
 fetchBooks();
 
+// when you search about title in text field
 searchBtn.addEventListener("click", searchMethod);
 
+// button to go to book to read it
 const more = (id) => {
   localStorage.setItem("bookid", id.id);
-  window.location.replace("http://127.0.0.1:5000/templates/more/more.html");
+  window.location.replace("http://127.0.0.1:5000/more");
 };

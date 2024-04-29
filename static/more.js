@@ -1,16 +1,19 @@
 const url = `https://www.googleapis.com/books/v1/volumes?q=search+terms`;
 const goBack = document.querySelector(".go-back-Btn");
 
+// book id selected
 const selectedBook = localStorage.getItem("bookid");
 const bookPic = document.getElementById("bookPic");
 const information = document.getElementById("information");
 
 let bookDiv = "";
 
+// Go back button to return to book viewer page
 goBack.addEventListener("click", () => {
-  window.location.replace("http://127.0.0.1:5000/templates/book-viewer");
+  window.location.href = "/book_viewer";
 });
 
+// fetch the selected book
 const fetchBook = async () => {
   try {
     const response = await fetch(url);

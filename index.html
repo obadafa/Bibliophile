@@ -14,6 +14,7 @@
     <title>Bibliophile</title>
   </head>
   <body>
+    <!-- Header Section -->
     <header class="header">
       <nav class="nav">
         <h1>Bibliophile</h1>
@@ -61,6 +62,7 @@
         </h3>
       </div>
 
+      <!-- Qoutes -->
       <div class="features">
         <img
           src="./static/img/mason-cooley.jpg"
@@ -73,6 +75,7 @@
             Reading gives us someplace to go when we have to stay where we are.
           </p>
         </div>
+
 
         <div class="features__feature">
           <h5 class="features__header">Richard Peck</h5>
@@ -104,6 +107,7 @@
         </h3>
       </div>
 
+      <!-- True Stories -->
       <div class="slider">
         <div class="slide">
           <div class="testimonial">
@@ -178,6 +182,7 @@
       </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
       <ul class="footer__nav">
         <li class="footer__item">
@@ -195,33 +200,35 @@
       </ul>
     </footer>
 
+    <!-- Sign Up Window -->
     <div class="signupmodal hidden">
       <button class="btn--close-signupmodal">&times;</button>
       <h2 class="modal__header">
         <span class="highlight"> Sign Up</span>
       </h2>
-      <form class="signup__form">
+      <form class="signup__form" action="signup" method="get">
         <label>Username</label>
-        <input type="text" name="username" />
+        <input type="text" name="username" required />
         <label>Password</label>
-        <input type="text" name="password"/>
+        <input type="text" name="password" required />
         <label>Confirm Password</label>
-        <input type="text" name="confirm-password"/>
+        <input type="text" name="confirm_password" required />
         <button class="btn">Confirm &rarr;</button>
       </form>
     </div>
     <div class="signupoverlay hidden"></div>
 
+    <!-- Sign in -->
     <div class="signinmodal hidden">
       <button class="btn--close-signinmodal">&times;</button>
       <h2 class="modal__header">
         <span class="highlight"> Sign in</span>
       </h2>
-      <form class="signin__form" action="/templates/book-viewer">
+      <form class="signin__form" action="signin">
         <label>Username</label>
-        <input type="text" name="username"/>
+        <input type="text" name="username" required />
         <label>Password</label>
-        <input type="text" name="password"/>
+        <input type="text" name="password" required />
         <button class="btn">Log in &rarr;</button>
       </form>
     </div>
