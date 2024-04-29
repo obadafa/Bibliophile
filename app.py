@@ -31,11 +31,10 @@ def singup():
     password =  flask.request.args.get('password')
     confirm_password =  flask.request.args.get('confirm_password')
     _user = user.User(name, password)
-    print( confirm_password)
     if _user.sign_up(confirm_password):
         index_html = get_html("templates/book-viewer")
     else:
-        index_html += "<p> You enter log out wrong values"
+        index_html += "<p> You enter wrong logout  values"
     return index_html
 
 # route to view book after sign in
@@ -48,7 +47,7 @@ def singin():
     if(_user.sign_in()):
         index_html = get_html("./templates/book-viewer")
     else:
-        index_html += "<p> You enter login wrong values"
+        index_html += "<p> You enter wrong login  values"
     return index_html
 
 # go to more page to read the chosen book

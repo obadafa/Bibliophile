@@ -57,7 +57,7 @@ const searchMethod = async () => {
   if (bookDiv != "") {
     div.innerHTML = bookDiv;
   } else {
-    div.innerHTML = `<p class="title">Sorry, There is no book with this title.</p>`;
+    div.innerHTML = `<p class="title" style = "height:300px !important">Sorry, There is no book with this title.</p>`;
   }
 };
 

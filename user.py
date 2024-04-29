@@ -1,5 +1,6 @@
 import flask
 import datetime
+import os
 
 class User:
     username = ""
@@ -13,18 +14,20 @@ class User:
     # read usernames and passwords
     def get_db(self):
         users_array = ''
-        file = open("users.txt", "r")
-        users = file.readlines()
-        file.close()
-        users_array = [user[:-1].split('$$$') for user in users]
-        print(users_array )
+        if os.path.exists('users.txt'):
+            file = open("users.txt", "r")
+            users = file.readlines()
+            file.close()
+            users_array = [user[:-1].split('$$$') for user in users]
+        else:
+            file = open("users.txt", "x")
+            file.close()
         return users_array
 
     # sign in function
     def sign_in(self):
         users = self.get_db()
         for username, password in users:
-            print(username + " " + password)
             if(self.username == username and self.password == password):
                 return True
         return False
