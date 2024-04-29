@@ -71,7 +71,7 @@ h1 {
 }
 
 #information {
-  padding: 10px;
+  padding: 20px;
   background-color: #37383d;
   width: 350px;
   height: 350px;
@@ -79,4 +79,21 @@ h1 {
   border-radius: 0 7px 7px 0;
   color: white;
   text-align: center;
+  font-size: 12px;
+}
+
+#bookPic {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.title {
+  height: 90%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#btn {
+  margin: 5px;
 }

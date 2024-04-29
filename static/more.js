@@ -29,9 +29,9 @@ const fetchBook = async () => {
 
   bookPic.innerHTML = `<img class="book-picture" src="${bookDiv.volumeInfo.imageLinks.smallThumbnail}" />`;
   information.innerHTML = `<h5 class="title"> ${bookDiv.volumeInfo.description}</h5>
-                          <a class="btn btn-success" href="${bookDiv.volumeInfo.previewLink}" target="_blank">
+                          <div id="btn"><a class="btn-success" href="${bookDiv.volumeInfo.previewLink}" target="_blank">
                             <button class="read-btn">Read</button>
-                          </a>`;
+                          </a></div>`;
 };
 
 fetchBook();
